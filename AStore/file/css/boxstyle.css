@@ -1,0 +1,17 @@
+.list_product{
+  border: 2px solid #d49f31;
+  border-radius: 10px;
+  width: 320px;
+  height: 120px;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.show_status{
+	text-align: center;
+	margin-left: 10px;
+	padding-top: 10px;
+}
+.text3{
+	padding-top: 10px;
+}

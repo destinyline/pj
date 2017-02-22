@@ -1,0 +1,490 @@
+html,body{
+  width: 360px;
+  height: 640px;
+  margin:0;
+  padding: 0;
+}
+
+
+ul {
+  font-size: 0;
+  position: relative;
+  padding: 0;
+  width: 360px;
+  user-select: none;
+}
+
+li {
+  display: inline-block;
+  width: 117px;
+  height: 60px;
+  background: #142438;
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;
+  color: #d8a231;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+ul.nav li {
+  font-size: 0;
+  position: relative;
+
+  user-select: none;
+  display: inline-block;
+  width: 220px;
+  height: 60px;
+  background: #eee;
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #d8a231;
+  transition: all 0.5s;
+}
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+
+.rippleEffect {
+  -webkit-animation: rippleDrop .6s linear;
+  animation: rippleDrop .6s linear;
+}
+
+@-webkit-keyframes 
+rippleDrop {  100% {
+ -webkit-transform: scale(2);
+ transform: scale(2);
+ opacity: 0;
+}
+}
+
+@keyframes 
+rippleDrop {  100% {
+ -webkit-transform: scale(2);
+ transform: scale(2);
+ opacity: 0;
+}
+}
+
+
+
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 12px/1 'Montserrat', sans-serif;
+  color: #333;
+  background: #333;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 360px;
+  display: flex;
+  height: 638px;
+}
+
+.sidebar {
+  position: absolute;
+  width: 220px;
+  height: 638px;
+}
+
+.content {
+  width: 360px;
+   height: 638px;
+  flex: 1;
+  padding: 4.2px;
+  background: #142438;
+  box-shadow: 0 0 5px black;
+  transform: translate3d(0, 0, 0);
+  transition: transform .3s;
+ 
+}
+
+.content.isOpen {
+  transform: translate3d(220px, 0, 0);
+  height: 638px;
+}
+
+.button {
+  cursor: pointer;
+  color: #d49f31;
+}
+
+.button:before {
+  content: '\f0c9';
+  font: 30px fontawesome;
+  color: #d49f31;
+}
+
+/* Demo Navigation */
+.title {
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: #d49f31;
+  border-bottom: 1px solid #222;
+  background: #1b3047;
+  font-weight: bold;
+}
+
+.nav li a {
+  position: relative;
+  display: block;
+  padding: 15px 15px 15px 50px;
+  font-size: 12px;
+  color: black;
+  border-bottom: 1px solid #222;
+}
+
+.nav li a:before {
+  font: 14px fontawesome;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+
+.nav li:nth-child(1) a:before {
+  content: '\f00a';
+}
+
+.nav li:nth-child(2) a:before {
+  content: '\f012';
+}
+
+.nav li:nth-child(3) a:before {
+  content: '\f0e8';
+}
+
+.nav li:nth-child(4) a:before {
+  content: '\f0c3';
+}
+
+.nav li:nth-child(5) a:before {
+  content: '\f022';
+}
+
+.nav li:nth-child(6) a:before {
+  content: '\f115';
+}
+
+.nav li:nth-child(7) a:before {
+  content: '\f085';
+}
+
+.nav li:nth-child(8) a:before {
+  content: '\f023';
+  left: 23px;
+}
+
+.nav li a:hover {
+  background: #1e364c;
+  color: white;
+}
+
+.nav li a.active {
+  box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #142438;
+  background: #1e364c;
+  color: white;
+}
+
+/* Demo Description */
+h1 {
+  margin: 25px 0 15px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #999;
+}
+
+.bg_index{
+  background: white;
+}
+.bg_index2{
+  background: white;
+  height: 50px;
+}
+.bg_index3{
+  background: white;
+  height: 32px;
+}
+.list_product{
+  border: 1px solid #d49f31;
+  border-radius: 10px;
+  width: 320px;
+  height: 120px;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+.list_product2{
+  border: 1px solid #d49f31;
+  border-radius: 10px;
+  width: 320px;
+  height: 120px;
+  margin-left: 15px;
+  background: white;
+
+
+}
+.pr_img{
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border: 1px solid #d49f31;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.ui-navbar{
+  width: 360px;
+}
+
+.head_name{
+  width: 360px;
+  background: #142438;
+  height: 50px;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+.text1{
+  padding-top: 15px;
+  color: #d49f31;
+}
+.search_box{
+  width: 360px;
+  height: 200px;
+}
+.text2{
+  margin: 10px;
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+.input[type=text] {
+    width: 320px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+.button_box2 {
+ margin-top: 10px;
+ margin-left: 7px;
+}
+/*-------------------------------------*/
+.cf:before, .cf:after{
+content:"";
+display:table;
+}
+.cf:after{
+clear:both;
+}
+.cf{
+zoom:1;
+}
+/*-------------------------------------*/
+
+.form-wrapper-2 {
+width: 330px;
+margin-left: 5px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+.form-wrapper-2 input {
+width: 210px;
+height: 40px;
+padding: 10px 5px;
+float: left;
+font: bold 15px 'Raleway', sans-serif;
+border: 0;
+background: #eee;
+-moz-border-radius: 3px 0 0 3px;
+-webkit-border-radius: 3px 0 0 3px;
+border-radius: 3px 0 0 3px;
+}
+.form-wrapper-2 input:focus {
+outline: 0;
+background: #fff;
+-moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+-webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+.form-wrapper-2 input::-webkit-input-placeholder {
+color: #999;
+font-weight: normal;
+font-style: italic;
+}
+.form-wrapper-2 input:-moz-placeholder {
+color: #999;
+font-weight: normal;
+font-style: italic;
+}
+.form-wrapper-2 input:-ms-input-placeholder {
+color: #999;
+font-weight: normal;
+font-style: italic;
+}
+.form-wrapper-2 button {
+overflow: visible;
+position: relative;
+float: right;
+border: 0;
+padding: 0;
+cursor: pointer;
+height: 40px;
+width: 120px;
+font: bold 15px/40px 'Raleway', sans-serif;
+color: #fff;
+text-transform: uppercase;
+background: #D88F3C;
+-moz-border-radius: 0 3px 3px 0;
+-webkit-border-radius: 0 3px 3px 0;
+border-radius: 0 3px 3px 0;
+text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+.form-wrapper-2 button:hover{
+background: #FA8807;
+}
+.form-wrapper-2 button:active,
+.form-wrapper-2 button:focus{
+background: #c42f2f;
+}
+.form-wrapper-2 button:before {
+content: '';
+position: absolute;
+border-width: 8px 8px 8px 0;
+border-style: solid solid solid none;
+border-color: transparent #D88F3C transparent;
+top: 12px;
+left: -6px;
+}
+.form-wrapper-2 button:hover:before{
+border-right-color: #FA8807;
+}
+.form-wrapper-2 button:focus:before{
+border-right-color: #c42f2f;
+}
+.form-wrapper-2 button::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+
+.allpage{
+  background: white;
+  height: 530px;
+}
+
+.button2 {
+
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  float: left;
+  text-align: center;
+  background-color: #d49f31;
+  border-radius: 5px;
+  float: left;
+color: white;
+  font-weight: bold;
+
+}
+.button3 {
+
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  float: left;
+  text-align: center;
+  background-color: #d49f31;
+  border-radius: 5px;
+  float: left;
+color: white;
+  font-weight: bold;
+  
+}
+.dec {
+  background-position: 0 -29px;
+  color: white;
+}
+
+.buttons {
+  padding: 20px 0 0 140px;
+}
+
+input#partridge{
+  width: 100px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 165px;
+
+}
+.select_value{
+  display: inline;
+  width: 300px;
+
+}
+
+.plus{
+  margin-left: 30px;
+}
+.text4{
+  width: 280px;
+  font-size: 12.5px;
+  color: #d49f31;
+}
+.text5{
+  padding-left: 130px;
+  width: 280px;
+  font-size: 12.5px;
+  margin-top: -95px;
+  color: #d49f31;
+}
